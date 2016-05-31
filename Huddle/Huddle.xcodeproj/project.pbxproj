@@ -12,6 +12,7 @@
 		418C3B351CFE03A90095830D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 418C3B331CFE03A90095830D /* Main.storyboard */; };
 		418C3B371CFE03A90095830D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 418C3B361CFE03A90095830D /* Assets.xcassets */; };
 		418C3B3A1CFE03A90095830D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 418C3B381CFE03A90095830D /* LaunchScreen.storyboard */; };
+		418C3B421CFE04A50095830D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 418C3B411CFE04A50095830D /* GoogleService-Info.plist */; };
 		763ADCB6A9B91744EF9DB657 /* Pods_Huddle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13E1AABD64C10FCBEFC93B06 /* Pods_Huddle.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +25,7 @@
 		418C3B361CFE03A90095830D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		418C3B391CFE03A90095830D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		418C3B3B1CFE03A90095830D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		418C3B411CFE04A50095830D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		43C5079EE2B887BB6D674868 /* Pods-Huddle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Huddle.release.xcconfig"; path = "Pods/Target Support Files/Pods-Huddle/Pods-Huddle.release.xcconfig"; sourceTree = "<group>"; };
 		BD58443210CE515DE58C14B2 /* Pods-Huddle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Huddle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Huddle/Pods-Huddle.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,14 +71,39 @@
 		418C3B2E1CFE03A90095830D /* Huddle */ = {
 			isa = PBXGroup;
 			children = (
-				418C3B2F1CFE03A90095830D /* AppDelegate.swift */,
-				418C3B311CFE03A90095830D /* ViewController.swift */,
-				418C3B331CFE03A90095830D /* Main.storyboard */,
-				418C3B361CFE03A90095830D /* Assets.xcassets */,
-				418C3B381CFE03A90095830D /* LaunchScreen.storyboard */,
-				418C3B3B1CFE03A90095830D /* Info.plist */,
+				418C3B451CFE04C90095830D /* Controllers */,
+				418C3B441CFE04C10095830D /* Views */,
+				418C3B431CFE04B30095830D /* Supporting Files */,
 			);
 			path = Huddle;
+			sourceTree = "<group>";
+		};
+		418C3B431CFE04B30095830D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				418C3B361CFE03A90095830D /* Assets.xcassets */,
+				418C3B3B1CFE03A90095830D /* Info.plist */,
+				418C3B411CFE04A50095830D /* GoogleService-Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		418C3B441CFE04C10095830D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				418C3B331CFE03A90095830D /* Main.storyboard */,
+				418C3B381CFE03A90095830D /* LaunchScreen.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		418C3B451CFE04C90095830D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				418C3B2F1CFE03A90095830D /* AppDelegate.swift */,
+				418C3B311CFE03A90095830D /* ViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		774B912803B09C74EC5DC8B6 /* Pods */ = {
@@ -150,6 +177,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				418C3B3A1CFE03A90095830D /* LaunchScreen.storyboard in Resources */,
+				418C3B421CFE04A50095830D /* GoogleService-Info.plist in Resources */,
 				418C3B371CFE03A90095830D /* Assets.xcassets in Resources */,
 				418C3B351CFE03A90095830D /* Main.storyboard in Resources */,
 			);
