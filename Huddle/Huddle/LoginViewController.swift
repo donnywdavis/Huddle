@@ -43,6 +43,11 @@ class LoginViewController: UIViewController {
         // Set up notification observers to see when the keyboard will show or hide
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
+        
+        // Set up a gesture to dismiss the keyboard when tapping outside of a text field
+        let dismissKeyboardTap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard(_:)))
+        dismissKeyboardTap.numberOfTapsRequired = 1
+        view.addGestureRecognizer(dismissKeyboardTap)
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -51,12 +56,17 @@ class LoginViewController: UIViewController {
         // Remove the notification observers when dismissing the view
         NSNotificationCenter.defaultCenter().removeObserver(self)
     }
-    
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        super.touchesBegan(touches, withEvent: event)
-        self.view.endEditing(true)
-    }
 
+}
+
+// MARK: Gesture Functions
+
+extension LoginViewController {
+    
+    func dismissKeyboard(tap: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
+    
 }
 
 // MARK: Button Actions 

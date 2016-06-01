@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SignupViewController: UIViewController {
     
@@ -36,8 +37,23 @@ class SignupViewController: UIViewController {
         // Set up notification observers to see when the keyboard will show or hide
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
+        
+        // Set up a gesture to dismiss the keyboard when tapping outside of a text field
+        let dismissKeyboardTap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard(_:)))
+        dismissKeyboardTap.numberOfTapsRequired = 1
+        view.addGestureRecognizer(dismissKeyboardTap)
     }
 
+}
+
+// MARK: Gesture Functions
+
+extension SignupViewController {
+    
+    func dismissKeyboard(tap: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
+    
 }
 
 // MARK: Button Actions
