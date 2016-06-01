@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		411106E91CFF771300B3DCB6 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411106E81CFF771300B3DCB6 /* SignupViewController.swift */; };
 		418C3B301CFE03A90095830D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418C3B2F1CFE03A90095830D /* AppDelegate.swift */; };
 		418C3B321CFE03A90095830D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418C3B311CFE03A90095830D /* LoginViewController.swift */; };
 		418C3B351CFE03A90095830D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 418C3B331CFE03A90095830D /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		13E1AABD64C10FCBEFC93B06 /* Pods_Huddle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Huddle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		411106E81CFF771300B3DCB6 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		418C3B2C1CFE03A90095830D /* Huddle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Huddle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		418C3B2F1CFE03A90095830D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		418C3B311CFE03A90095830D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 			children = (
 				418C3B2F1CFE03A90095830D /* AppDelegate.swift */,
 				418C3B311CFE03A90095830D /* LoginViewController.swift */,
+				411106E81CFF771300B3DCB6 /* SignupViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				418C3B321CFE03A90095830D /* LoginViewController.swift in Sources */,
+				411106E91CFF771300B3DCB6 /* SignupViewController.swift in Sources */,
 				418C3B301CFE03A90095830D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

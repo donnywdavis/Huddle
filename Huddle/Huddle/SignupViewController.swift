@@ -1,85 +1,58 @@
 //
-//  LoginViewController.swift
+//  SignupViewController.swift
 //  Huddle
 //
-//  Created by Donny Davis on 5/31/16.
+//  Created by Donny Davis on 6/1/16.
 //  Copyright © 2016 Donny Davis. All rights reserved.
 //
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class SignupViewController: UIViewController {
     
     // MARK: IBOutlets
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var teamNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var confirmPasswordTextField: UITextField!
     @IBOutlet weak var signupButton: UIButton!
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var scrollViewContent: UIView!
-    
 
-    // MARK: View Lifecycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
         
         // Set the delegate for the text fields
+        teamNameTextField.delegate = self
         emailTextField.delegate = self
         passwordTextField.delegate = self
-        
-        loginButton.enabled = false
-        loginButton.layer.cornerRadius = 5
-        signupButton.layer.cornerRadius = 5
+        confirmPasswordTextField.delegate = self
         
         activityIndicator.stopAnimating()
+        
+        signupButton.layer.cornerRadius = 5
         
         // Set up notification observers to see when the keyboard will show or hide
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
     }
-    
-    override func viewWillDisappear(animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        // Remove the notification observers when dismissing the view
-        NSNotificationCenter.defaultCenter().removeObserver(self)
-    }
-    
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        super.touchesBegan(touches, withEvent: event)
-        self.view.endEditing(true)
-    }
 
 }
 
-// MARK: Button Actions 
+// MARK: Button Actions
 
-extension LoginViewController {
-    
-    @IBAction func loginButtonPressed(sender: UIButton) {
-        textFieldShouldReturn(passwordTextField)
-    }
+extension SignupViewController {
     
     @IBAction func signupButtonPressed(sender: UIButton) {
-        guard let signupVC = storyboard?.instantiateViewControllerWithIdentifier("SignupView") else {
-            return
-        }
-        
-        presentViewController(signupVC, animated: true, completion: nil)
+        textFieldShouldReturn(confirmPasswordTextField)
     }
     
 }
 
 // MARK: Keyboard Notifications
 
-extension LoginViewController {
+extension SignupViewController {
     
     func keyboardWillShow(notification: NSNotification) {
         
@@ -91,10 +64,14 @@ extension LoginViewController {
         scrollView.contentInset = contentInsets
         scrollView.scrollIndicatorInsets = contentInsets
         
-        if emailTextField.isFirstResponder() {
+        if teamNameTextField.isFirstResponder() {
+            scrollView.scrollRectToVisible(teamNameTextField.frame, animated: true)
+        } else if emailTextField.isFirstResponder() {
             scrollView.scrollRectToVisible(emailTextField.frame, animated: true)
         } else if passwordTextField.isFirstResponder() {
             scrollView.scrollRectToVisible(passwordTextField.frame, animated: true)
+        } else if confirmPasswordTextField.isFirstResponder() {
+            scrollView.scrollRectToVisible(confirmPasswordTextField.frame, animated: true)
         }
         
     }
@@ -111,22 +88,28 @@ extension LoginViewController {
 
 // MARK: Text Field Delegates
 
-extension LoginViewController: UITextFieldDelegate {
+extension SignupViewController: UITextFieldDelegate {
     
     func textFieldDidBeginEditing(textField: UITextField) {
-        if passwordTextField.isFirstResponder() {
-            loginButton.enabled = true
+        if confirmPasswordTextField.isFirstResponder() {
+            signupButton.enabled = true
         }
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         
-        if emailTextField.isFirstResponder() {
+        if teamNameTextField.isFirstResponder() {
+            teamNameTextField.resignFirstResponder()
+            emailTextField.becomeFirstResponder()
+        } else if emailTextField.isFirstResponder() {
             emailTextField.resignFirstResponder()
             passwordTextField.becomeFirstResponder()
             
         } else if passwordTextField.isFirstResponder() {
             passwordTextField.resignFirstResponder()
+            confirmPasswordTextField.becomeFirstResponder()
+        } else if confirmPasswordTextField.isFirstResponder() {
+            confirmPasswordTextField.resignFirstResponder()
             activityIndicator.startAnimating()
         }
         
@@ -135,4 +118,3 @@ extension LoginViewController: UITextFieldDelegate {
     }
     
 }
-
