@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		411106E91CFF771300B3DCB6 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411106E81CFF771300B3DCB6 /* SignupViewController.swift */; };
+		411106EB1CFF85BF00B3DCB6 /* NewsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411106EA1CFF85BF00B3DCB6 /* NewsFeedViewController.swift */; };
+		411106EE1CFF862500B3DCB6 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411106ED1CFF862500B3DCB6 /* DataService.swift */; };
+		411106F11CFF878C00B3DCB6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411106F01CFF878C00B3DCB6 /* User.swift */; };
 		418C3B301CFE03A90095830D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418C3B2F1CFE03A90095830D /* AppDelegate.swift */; };
 		418C3B321CFE03A90095830D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418C3B311CFE03A90095830D /* LoginViewController.swift */; };
 		418C3B351CFE03A90095830D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 418C3B331CFE03A90095830D /* Main.storyboard */; };
@@ -20,6 +23,9 @@
 /* Begin PBXFileReference section */
 		13E1AABD64C10FCBEFC93B06 /* Pods_Huddle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Huddle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		411106E81CFF771300B3DCB6 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		411106EA1CFF85BF00B3DCB6 /* NewsFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsFeedViewController.swift; sourceTree = "<group>"; };
+		411106ED1CFF862500B3DCB6 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		411106F01CFF878C00B3DCB6 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		418C3B2C1CFE03A90095830D /* Huddle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Huddle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		418C3B2F1CFE03A90095830D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		418C3B311CFE03A90095830D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -52,6 +58,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		411106EC1CFF861400B3DCB6 /* Data Service */ = {
+			isa = PBXGroup;
+			children = (
+				411106ED1CFF862500B3DCB6 /* DataService.swift */,
+			);
+			name = "Data Service";
+			sourceTree = "<group>";
+		};
+		411106EF1CFF877E00B3DCB6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				411106F01CFF878C00B3DCB6 /* User.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		418C3B231CFE03A90095830D = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +95,8 @@
 		418C3B2E1CFE03A90095830D /* Huddle */ = {
 			isa = PBXGroup;
 			children = (
+				411106EF1CFF877E00B3DCB6 /* Models */,
+				411106EC1CFF861400B3DCB6 /* Data Service */,
 				418C3B451CFE04C90095830D /* Controllers */,
 				418C3B441CFE04C10095830D /* Views */,
 				418C3B431CFE04B30095830D /* Supporting Files */,
@@ -105,6 +129,7 @@
 				418C3B2F1CFE03A90095830D /* AppDelegate.swift */,
 				418C3B311CFE03A90095830D /* LoginViewController.swift */,
 				411106E81CFF771300B3DCB6 /* SignupViewController.swift */,
+				411106EA1CFF85BF00B3DCB6 /* NewsFeedViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -243,7 +268,10 @@
 			files = (
 				418C3B321CFE03A90095830D /* LoginViewController.swift in Sources */,
 				411106E91CFF771300B3DCB6 /* SignupViewController.swift in Sources */,
+				411106F11CFF878C00B3DCB6 /* User.swift in Sources */,
 				418C3B301CFE03A90095830D /* AppDelegate.swift in Sources */,
+				411106EB1CFF85BF00B3DCB6 /* NewsFeedViewController.swift in Sources */,
+				411106EE1CFF862500B3DCB6 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
