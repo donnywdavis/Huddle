@@ -17,6 +17,8 @@
 		418C3B371CFE03A90095830D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 418C3B361CFE03A90095830D /* Assets.xcassets */; };
 		418C3B3A1CFE03A90095830D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 418C3B381CFE03A90095830D /* LaunchScreen.storyboard */; };
 		418C3B421CFE04A50095830D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 418C3B411CFE04A50095830D /* GoogleService-Info.plist */; };
+		41A9573D1D008FA7003252E7 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A9573C1D008FA7003252E7 /* CustomButton.swift */; };
+		41A9573F1D0091D1003252E7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A9573E1D0091D1003252E7 /* ProfileViewController.swift */; };
 		763ADCB6A9B91744EF9DB657 /* Pods_Huddle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13E1AABD64C10FCBEFC93B06 /* Pods_Huddle.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +36,8 @@
 		418C3B391CFE03A90095830D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		418C3B3B1CFE03A90095830D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		418C3B411CFE04A50095830D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		41A9573C1D008FA7003252E7 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		41A9573E1D0091D1003252E7 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		43C5079EE2B887BB6D674868 /* Pods-Huddle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Huddle.release.xcconfig"; path = "Pods/Target Support Files/Pods-Huddle/Pods-Huddle.release.xcconfig"; sourceTree = "<group>"; };
 		BD58443210CE515DE58C14B2 /* Pods-Huddle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Huddle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Huddle/Pods-Huddle.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -119,6 +123,7 @@
 			children = (
 				418C3B331CFE03A90095830D /* Main.storyboard */,
 				418C3B381CFE03A90095830D /* LaunchScreen.storyboard */,
+				41A9573C1D008FA7003252E7 /* CustomButton.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -130,6 +135,7 @@
 				418C3B311CFE03A90095830D /* LoginViewController.swift */,
 				411106E81CFF771300B3DCB6 /* SignupViewController.swift */,
 				411106EA1CFF85BF00B3DCB6 /* NewsFeedViewController.swift */,
+				41A9573E1D0091D1003252E7 /* ProfileViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -270,7 +276,9 @@
 				411106E91CFF771300B3DCB6 /* SignupViewController.swift in Sources */,
 				411106F11CFF878C00B3DCB6 /* User.swift in Sources */,
 				418C3B301CFE03A90095830D /* AppDelegate.swift in Sources */,
+				41A9573D1D008FA7003252E7 /* CustomButton.swift in Sources */,
 				411106EB1CFF85BF00B3DCB6 /* NewsFeedViewController.swift in Sources */,
+				41A9573F1D0091D1003252E7 /* ProfileViewController.swift in Sources */,
 				411106EE1CFF862500B3DCB6 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
