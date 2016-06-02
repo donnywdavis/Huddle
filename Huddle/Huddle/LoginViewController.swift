@@ -33,7 +33,9 @@ class LoginViewController: UIViewController {
         
         FIRAuth.auth()?.addAuthStateDidChangeListener({ (auth, user) in
             if user != nil {
-                self.performSegueWithIdentifier("LoginNewsFeedSegue", sender: nil)
+                dispatch_async(dispatch_get_main_queue(), { 
+                    self.performSegueWithIdentifier("LoginNewsFeedSegue", sender: nil)
+                })
             }
         })
         
@@ -91,6 +93,16 @@ extension LoginViewController {
     
 }
 
+// MARK: Navigation
+
+extension LoginViewController {
+    
+    @IBAction func logoutUnwind(segue: UIStoryboardSegue) {
+        
+    }
+    
+}
+
 // MARK: Button Actions 
 
 extension LoginViewController {
@@ -109,7 +121,9 @@ extension LoginViewController {
                 return
             }
             
-            self.performSegueWithIdentifier("LoginNewsFeedSegue", sender: nil)
+            dispatch_async(dispatch_get_main_queue(), { 
+                self.performSegueWithIdentifier("LoginNewsFeedSegue", sender: nil)
+            })
             
 //            guard let newsFeedVC = self.storyboard?.instantiateViewControllerWithIdentifier("NewsFeedView") as? NewsFeedViewController else {
 //                return

@@ -107,7 +107,9 @@ extension SignupViewController {
                     return
                 }
                 
-                self.performSegueWithIdentifier("SignupNewsFeedSegue", sender: nil)
+                dispatch_async(dispatch_get_main_queue(), {
+                    self.performSegueWithIdentifier("SignupNewsFeedSegue", sender: nil)
+                })
                 
 //                guard let newsFeedVC = self.storyboard?.instantiateViewControllerWithIdentifier("NewsFeedView") as? NewsFeedViewController else {
 //                    return

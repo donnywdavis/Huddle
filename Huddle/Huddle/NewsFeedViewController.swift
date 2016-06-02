@@ -26,8 +26,9 @@ class NewsFeedViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        title = "huddle"
+        
     }
 
 }
@@ -40,7 +41,7 @@ extension NewsFeedViewController {
         
         do {
             try FIRAuth.auth()?.signOut()
-            self.dismissViewControllerAnimated(true, completion: nil)
+            dismissViewControllerAnimated(true, completion: nil)
         } catch {
             print("Error: \(error)")
         }
