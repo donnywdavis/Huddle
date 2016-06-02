@@ -182,11 +182,11 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3bV-8d-Hke">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aPp-yv-XpW">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aPp-yv-XpW" userLabel="Top View">
                                                 <rect key="frame" x="0.0" y="0.0" width="600" height="268"/>
                                                 <color key="backgroundColor" red="0.75686274509803919" green="0.85098039215686272" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fti-jt-Awz">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fti-jt-Awz" userLabel="Bottom View">
                                                 <rect key="frame" x="0.0" y="268" width="600" height="268"/>
                                                 <subviews>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Display name (optional)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i16-1A-mZP">
@@ -197,13 +197,17 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfile" translatesAutoresizingMaskIntoConstraints="NO" id="1qE-yi-W78">
+                                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfile" translatesAutoresizingMaskIntoConstraints="NO" id="1qE-yi-W78">
                                                         <rect key="frame" x="250" y="63" width="100" height="100"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <gestureRecognizers/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="100" id="dzw-hK-oUc"/>
                                                             <constraint firstAttribute="height" constant="100" id="yVb-KF-C9R"/>
                                                         </constraints>
+                                                        <connections>
+                                                            <outletCollection property="gestureRecognizers" destination="yGy-hv-uxh" appends="YES" id="7Xm-a4-vfH"/>
+                                                        </connections>
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dnV-ta-riM">
                                                         <rect key="frame" x="216" y="178" width="168" height="40"/>
@@ -223,7 +227,7 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Photo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2AM-Cu-jB7">
-                                                        <rect key="frame" x="250.5" y="142" width="100" height="21"/>
+                                                        <rect key="frame" x="250" y="142" width="100" height="21"/>
                                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.34527371453900707" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -273,10 +277,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="6bc-cB-8YP" firstAttribute="top" secondItem="DX6-O2-21C" secondAttribute="bottom" id="OqE-3t-8I5"/>
-                            <constraint firstAttribute="trailing" secondItem="DX6-O2-21C" secondAttribute="trailing" id="cOP-01-UlM"/>
-                            <constraint firstItem="DX6-O2-21C" firstAttribute="leading" secondItem="dXi-Sm-Vt6" secondAttribute="leading" id="kk1-tH-iSU"/>
-                            <constraint firstItem="DX6-O2-21C" firstAttribute="top" secondItem="9ze-TO-ZWX" secondAttribute="bottom" id="qX0-c6-QQA"/>
+                            <constraint firstItem="DX6-O2-21C" firstAttribute="leading" secondItem="dXi-Sm-Vt6" secondAttribute="leading" id="0id-f4-8TV"/>
+                            <constraint firstItem="DX6-O2-21C" firstAttribute="top" secondItem="dXi-Sm-Vt6" secondAttribute="top" constant="64" id="Pgd-Xo-jPU"/>
+                            <constraint firstItem="6bc-cB-8YP" firstAttribute="top" secondItem="DX6-O2-21C" secondAttribute="bottom" id="jHb-gq-yUS"/>
+                            <constraint firstAttribute="trailing" secondItem="DX6-O2-21C" secondAttribute="trailing" id="kKb-zd-vTv"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="W8S-OK-QkI">
@@ -295,11 +299,18 @@
                     </navigationItem>
                     <connections>
                         <outlet property="displayNameTextField" destination="i16-1A-mZP" id="LXC-M9-YOh"/>
+                        <outlet property="logoutButton" destination="dnV-ta-riM" id="hQx-ad-Gdk"/>
                         <outlet property="profileImage" destination="1qE-yi-W78" id="HH5-oy-NbE"/>
+                        <outlet property="scrollView" destination="DX6-O2-21C" id="k2y-n9-z7s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aRf-Xm-6Bp" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="NSY-Jb-ZKl" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="yGy-hv-uxh">
+                    <connections>
+                        <action selector="imageTapped:" destination="ATT-iN-txm" id="sNu-JG-2lB"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2779" y="-24"/>
         </scene>
