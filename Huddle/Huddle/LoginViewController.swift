@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginViewController: UIViewController {
     
@@ -30,9 +31,17 @@ class LoginViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
+        FIRAuth.auth()?.addAuthStateDidChangeListener({ (auth, user) in
+            if user != nil {
+                self.performSegueWithIdentifier("LoginNewsFeedSegue", sender: nil)
+            }
+        })
+        
         // Set the delegate for the text fields
         emailTextField.delegate = self
         passwordTextField.delegate = self
+        emailTextField.text = ""
+        passwordTextField.text = ""
         
         loginButton.enabled = false
         loginButton.layer.cornerRadius = 5
@@ -59,6 +68,19 @@ class LoginViewController: UIViewController {
 
 }
 
+// MARK: Error Messages
+
+extension LoginViewController {
+    
+    func displayMessage(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+        let okButton = UIAlertAction(title: "Ok", style: .Default, handler: nil)
+        alertController.addAction(okButton)
+        presentViewController(alertController, animated: true, completion: nil)
+    }
+    
+}
+
 // MARK: Gesture Functions
 
 extension LoginViewController {
@@ -75,14 +97,27 @@ extension LoginViewController {
     
     @IBAction func loginButtonPressed(sender: UIButton) {
         textFieldShouldReturn(passwordTextField)
-    }
-    
-    @IBAction func signupButtonPressed(sender: UIButton) {
-        guard let signupVC = storyboard?.instantiateViewControllerWithIdentifier("SignupView") else {
+        guard let email = emailTextField.text, let password = passwordTextField.text else {
             return
         }
         
-        presentViewController(signupVC, animated: true, completion: nil)
+        FIRAuth.auth()?.signInWithEmail(email, password: password, completion: { (userInfo, error) in
+            self.activityIndicator.stopAnimating()
+            
+            guard error == nil else {
+                self.displayMessage("Invalid Signin", message: "Could not sign in. Please check your email and password.")
+                return
+            }
+            
+            self.performSegueWithIdentifier("LoginNewsFeedSegue", sender: nil)
+            
+//            guard let newsFeedVC = self.storyboard?.instantiateViewControllerWithIdentifier("NewsFeedView") as? NewsFeedViewController else {
+//                return
+//            }
+//            self.activityIndicator.stopAnimating()
+//            newsFeedVC.email = userInfo!.email
+//            self.presentViewController(newsFeedVC, animated: true, completion: nil)
+        })
     }
     
 }

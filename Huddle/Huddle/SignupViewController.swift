@@ -19,6 +19,7 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
     @IBOutlet weak var signupButton: UIButton!
+    @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var scrollView: UIScrollView!
 
     override func viewDidLoad() {
@@ -29,10 +30,15 @@ class SignupViewController: UIViewController {
         emailTextField.delegate = self
         passwordTextField.delegate = self
         confirmPasswordTextField.delegate = self
+        teamNameTextField.text = ""
+        emailTextField.text = ""
+        passwordTextField.text = ""
+        confirmPasswordTextField.text = ""
         
         activityIndicator.stopAnimating()
         
         signupButton.layer.cornerRadius = 5
+        loginButton.layer.cornerRadius = 5
         
         // Set up notification observers to see when the keyboard will show or hide
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
@@ -44,6 +50,19 @@ class SignupViewController: UIViewController {
         view.addGestureRecognizer(dismissKeyboardTap)
     }
 
+}
+
+// MARK: Error Messages
+
+extension SignupViewController {
+    
+    func displayMessage(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+        let okButton = UIAlertAction(title: "Ok", style: .Default, handler: nil)
+        alertController.addAction(okButton)
+        presentViewController(alertController, animated: true, completion: nil)
+    }
+    
 }
 
 // MARK: Gesture Functions
@@ -62,6 +81,43 @@ extension SignupViewController {
     
     @IBAction func signupButtonPressed(sender: UIButton) {
         textFieldShouldReturn(confirmPasswordTextField)
+        
+        guard let email = emailTextField.text, let password = passwordTextField.text, let team = teamNameTextField.text else {
+            return
+        }
+    
+        FIRAuth.auth()?.createUserWithEmail(email, password: password, completion: { (userInfo, error) in
+            guard error == nil else {
+                self.activityIndicator.stopAnimating()
+                self.displayMessage("Error on Create", message: "There was a problem creating the account.")
+                return
+            }
+            
+            guard let userInfo = userInfo else {
+                return
+            }
+            let user = ["email": email, "displayName": "", "team": team]
+            FIRDatabase.database().reference().child("users").child(userInfo.uid).setValue(user)
+            
+            FIRAuth.auth()?.signInWithEmail(email, password: password, completion: { (userInfo, error) in
+                self.activityIndicator.stopAnimating()
+                
+                guard error == nil else {
+                    self.displayMessage("Invalid Signin", message: "Could not sign in. Please check your email and password.")
+                    return
+                }
+                
+                self.performSegueWithIdentifier("SignupNewsFeedSegue", sender: nil)
+                
+//                guard let newsFeedVC = self.storyboard?.instantiateViewControllerWithIdentifier("NewsFeedView") as? NewsFeedViewController else {
+//                    return
+//                }
+//                
+//                self.activityIndicator.stopAnimating()
+//                newsFeedVC.email = userInfo!.email
+//                self.presentViewController(newsFeedVC, animated: true, completion: nil)
+            })
+        })
     }
     
 }
