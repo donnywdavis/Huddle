@@ -13,39 +13,76 @@ class NewsFeedViewController: UIViewController {
     
     // MARK: IBOutlets
     
-    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var tableView: UITableView!
     
-    // Properties
-    
-    var email: String? {
-        didSet {
-            emailLabel!.text = email
-        }
-    }
-    
+    // MARK: Properties
+
+    var postKeys = [String]()
+    var posts = [Post]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         title = "huddle"
         
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.tableFooterView = UIView(frame: CGRectZero)
+        
+        DataService.sharedInstance.getNewsFeed { (snapshot) in
+            if let postsDictionary: [String: [String: String]] = snapshot.value as? [String: [String: String]] {
+                self.posts = []
+                for post in postsDictionary.keys {
+                    self.posts.append(Post(json: postsDictionary[post]!)!)
+                }
+                self.tableView.reloadData()
+            }
+        }
+        
     }
 
 }
 
-// MARK: Button Actions
+// MARK: Table View Delegate
 
-extension NewsFeedViewController {
+extension NewsFeedViewController: UITableViewDelegate, UITableViewDataSource {
     
-    @IBAction func logoutButtonPressed(sender: UIButton) {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return posts.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let post = posts[indexPath.row]
         
-        do {
-            try FIRAuth.auth()?.signOut()
-            dismissViewControllerAnimated(true, completion: nil)
-        } catch {
-            print("Error: \(error)")
+        switch post.type! {
+        case "post":
+            let cell = tableView.dequeueReusableCellWithIdentifier("PostCell", forIndexPath: indexPath) as! NewsFeedTableViewCell
+            cell.configureCell(post)
+            return cell
+            
+        case "schedule":
+            let cell = tableView.dequeueReusableCellWithIdentifier("ScheduleCell", forIndexPath: indexPath) as! ScheduleTableViewCell
+            cell.configureCell(post)
+            return cell
+            
+        default:
+            return UITableViewCell()
         }
         
     }
     
+    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        let post = posts[indexPath.row]
+        switch post.type! {
+        case "post":
+            return 130.0
+            
+        case "schedule":
+            return 110.0
+        
+        default:
+            return 100.0
+        }
+    }
+    
 }
+

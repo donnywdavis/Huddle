@@ -97,7 +97,7 @@ extension SignupViewController {
                 return
             }
             let user = ["email": email, "displayName": "", "team": team]
-            FIRDatabase.database().reference().child("users").child(userInfo.uid).setValue(user)
+            DataService.sharedInstance.createUserAccount(userInfo.uid, user: user)
             
             FIRAuth.auth()?.signInWithEmail(email, password: password, completion: { (userInfo, error) in
                 self.activityIndicator.stopAnimating()
@@ -111,13 +111,6 @@ extension SignupViewController {
                     self.performSegueWithIdentifier("SignupNewsFeedSegue", sender: nil)
                 })
                 
-//                guard let newsFeedVC = self.storyboard?.instantiateViewControllerWithIdentifier("NewsFeedView") as? NewsFeedViewController else {
-//                    return
-//                }
-//                
-//                self.activityIndicator.stopAnimating()
-//                newsFeedVC.email = userInfo!.email
-//                self.presentViewController(newsFeedVC, animated: true, completion: nil)
             })
         })
     }

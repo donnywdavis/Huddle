@@ -31,13 +31,11 @@ class LoginViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        FIRAuth.auth()?.addAuthStateDidChangeListener({ (auth, user) in
-            if user != nil {
-                dispatch_async(dispatch_get_main_queue(), { 
-                    self.performSegueWithIdentifier("LoginNewsFeedSegue", sender: nil)
-                })
+        DataService.sharedInstance.isUserLoggedIn { (loggedIn) in
+            if loggedIn {
+                self.performSegueWithIdentifier("LoginNewsFeedSegue", sender: nil)
             }
-        })
+        }
         
         // Set the delegate for the text fields
         emailTextField.delegate = self
@@ -124,13 +122,7 @@ extension LoginViewController {
             dispatch_async(dispatch_get_main_queue(), { 
                 self.performSegueWithIdentifier("LoginNewsFeedSegue", sender: nil)
             })
-            
-//            guard let newsFeedVC = self.storyboard?.instantiateViewControllerWithIdentifier("NewsFeedView") as? NewsFeedViewController else {
-//                return
-//            }
-//            self.activityIndicator.stopAnimating()
-//            newsFeedVC.email = userInfo!.email
-//            self.presentViewController(newsFeedVC, animated: true, completion: nil)
+
         })
     }
     

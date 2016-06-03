@@ -20,6 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FIRApp.configure()
         
+        let navBarAppearance = UINavigationBar.appearance()
+        navBarAppearance.tintColor = UIColor.whiteColor()
+        
         return true
     }
 
