@@ -15,13 +15,10 @@ class NewsFeedTableViewCell: UITableViewCell {
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var postLabel: UILabel!
-    @IBOutlet weak var cellView: UIView!
     
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        cellView.layer.cornerRadius = 5
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

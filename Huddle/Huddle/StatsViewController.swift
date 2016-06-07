@@ -18,6 +18,7 @@ class StatsViewController: UIViewController {
     
     var teams = [String: AnyObject]()
     var teamNames = [String]()
+    var selectedTeam = "The Adams"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +40,11 @@ class StatsViewController: UIViewController {
 extension StatsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return teamNames.count
+        if let players = teams[selectedTeam]?["members"] {
+            return (players?.allKeys.count)!
+        } else {
+            return 0
+        }
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -47,9 +52,13 @@ extension StatsViewController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         
-        let team = teamNames[indexPath.row]
-        let player = teams[team]!["members"]!!["player1"]!!["name"] as! String
-        cell.configureCell(player)
+        guard let players = teams[selectedTeam]?["members"],
+            let playersKeys = players?.allKeys as? [String],
+            let player = players?[playersKeys[indexPath.row]] as? [String: AnyObject]else {
+            return UITableViewCell()
+        }
+        
+        cell.configureCell(player["name"] as! String, games: player["games"] as! Int, pracs: player["pracs"] as! Int, kickAvg: player["kickAvg"] as! Int, homeRuns: player["homeRuns"] as! Int)
         
         return cell
     }

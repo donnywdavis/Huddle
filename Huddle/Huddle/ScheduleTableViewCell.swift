@@ -12,12 +12,9 @@ class ScheduleTableViewCell: UITableViewCell {
     
     // MARK: IBOutlets
     @IBOutlet weak var scheduleLabel: UILabel!
-    @IBOutlet weak var cellView: UIView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        cellView.layer.cornerRadius = 5
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

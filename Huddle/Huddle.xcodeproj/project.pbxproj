@@ -11,6 +11,11 @@
 		411106EB1CFF85BF00B3DCB6 /* NewsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411106EA1CFF85BF00B3DCB6 /* NewsFeedViewController.swift */; };
 		411106EE1CFF862500B3DCB6 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411106ED1CFF862500B3DCB6 /* DataService.swift */; };
 		411106F11CFF878C00B3DCB6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411106F01CFF878C00B3DCB6 /* User.swift */; };
+		417F763B1D0387290044548B /* RobotoSlab-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 417F76371D03848E0044548B /* RobotoSlab-Bold.ttf */; };
+		417F763C1D0387290044548B /* RobotoSlab-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 417F76381D03848E0044548B /* RobotoSlab-Light.ttf */; };
+		417F763D1D0387290044548B /* RobotoSlab-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 417F76391D03848E0044548B /* RobotoSlab-Regular.ttf */; };
+		417F763E1D0387290044548B /* RobotoSlab-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 417F763A1D03848E0044548B /* RobotoSlab-Thin.ttf */; };
+		417F763F1D0387290044548B /* SignPainter_HouseScript.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 417F76361D03847B0044548B /* SignPainter_HouseScript.ttf */; };
 		418C3B301CFE03A90095830D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418C3B2F1CFE03A90095830D /* AppDelegate.swift */; };
 		418C3B321CFE03A90095830D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418C3B311CFE03A90095830D /* LoginViewController.swift */; };
 		418C3B351CFE03A90095830D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 418C3B331CFE03A90095830D /* Main.storyboard */; };
@@ -33,6 +38,11 @@
 		411106EA1CFF85BF00B3DCB6 /* NewsFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsFeedViewController.swift; sourceTree = "<group>"; };
 		411106ED1CFF862500B3DCB6 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		411106F01CFF878C00B3DCB6 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		417F76361D03847B0044548B /* SignPainter_HouseScript.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SignPainter_HouseScript.ttf; sourceTree = "<group>"; };
+		417F76371D03848E0044548B /* RobotoSlab-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Bold.ttf"; sourceTree = "<group>"; };
+		417F76381D03848E0044548B /* RobotoSlab-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Light.ttf"; sourceTree = "<group>"; };
+		417F76391D03848E0044548B /* RobotoSlab-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Regular.ttf"; sourceTree = "<group>"; };
+		417F763A1D03848E0044548B /* RobotoSlab-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Thin.ttf"; sourceTree = "<group>"; };
 		418C3B2C1CFE03A90095830D /* Huddle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Huddle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		418C3B2F1CFE03A90095830D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		418C3B311CFE03A90095830D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +132,11 @@
 		418C3B431CFE04B30095830D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				417F76371D03848E0044548B /* RobotoSlab-Bold.ttf */,
+				417F76381D03848E0044548B /* RobotoSlab-Light.ttf */,
+				417F76391D03848E0044548B /* RobotoSlab-Regular.ttf */,
+				417F763A1D03848E0044548B /* RobotoSlab-Thin.ttf */,
+				417F76361D03847B0044548B /* SignPainter_HouseScript.ttf */,
 				418C3B361CFE03A90095830D /* Assets.xcassets */,
 				418C3B3B1CFE03A90095830D /* Info.plist */,
 				418C3B411CFE04A50095830D /* GoogleService-Info.plist */,
@@ -225,6 +240,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				417F763B1D0387290044548B /* RobotoSlab-Bold.ttf in Resources */,
+				417F763C1D0387290044548B /* RobotoSlab-Light.ttf in Resources */,
+				417F763D1D0387290044548B /* RobotoSlab-Regular.ttf in Resources */,
+				417F763E1D0387290044548B /* RobotoSlab-Thin.ttf in Resources */,
+				417F763F1D0387290044548B /* SignPainter_HouseScript.ttf in Resources */,
 				418C3B3A1CFE03A90095830D /* LaunchScreen.storyboard in Resources */,
 				418C3B421CFE04A50095830D /* GoogleService-Info.plist in Resources */,
 				418C3B371CFE03A90095830D /* Assets.xcassets in Resources */,

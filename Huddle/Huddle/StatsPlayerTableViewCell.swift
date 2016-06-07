@@ -14,12 +14,13 @@ class StatsPlayerTableViewCell: UITableViewCell {
     
     @IBOutlet weak var profileImage: UIView!
     @IBOutlet weak var playerName: UILabel!
-    @IBOutlet weak var cellView: UIView!
+    @IBOutlet weak var gamesLabel: UILabel!
+    @IBOutlet weak var pracsLabel: UILabel!
+    @IBOutlet weak var kickAvgLabel: UILabel!
+    @IBOutlet weak var homeRunsLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        cellView.layer.cornerRadius = 5
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
@@ -28,8 +29,12 @@ class StatsPlayerTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configureCell(name: String) {
+    func configureCell(name: String, games: Int, pracs: Int, kickAvg: Int, homeRuns: Int) {
         playerName.text = name
+        gamesLabel.text = String(games)
+        pracsLabel.text = String(pracs)
+        kickAvgLabel.text = String(kickAvg)
+        homeRunsLabel.text = String(homeRuns)
     }
 
 }
