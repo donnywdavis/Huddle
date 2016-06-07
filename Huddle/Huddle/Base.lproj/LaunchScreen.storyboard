@@ -4,6 +4,14 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="RobotoSlab-Regular.ttf">
+            <string>RobotoSlab-Regular</string>
+        </mutableArray>
+        <mutableArray key="SignPainter_HouseScript.ttf">
+            <string>SignPainterHouseScript</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
@@ -21,14 +29,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="huddle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HlX-UA-BC9">
-                                        <rect key="frame" x="181" y="80" width="239" height="96"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                        <rect key="frame" x="133.5" y="45" width="333" height="179"/>
+                                        <fontDescription key="fontDescription" name="SignPainterHouseScript" family="SignPainter HouseScript" pointSize="150"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="get it together" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jfu-d3-NYQ">
-                                        <rect key="frame" x="181" y="184" width="239" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <rect key="frame" x="134" y="177" width="333" height="66"/>
+                                        <fontDescription key="fontDescription" name="RobotoSlab-Regular" family="Roboto Slab" pointSize="50"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -36,9 +44,9 @@
                                 <color key="backgroundColor" red="0.75686274509803919" green="0.85098039215686272" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="jfu-d3-NYQ" firstAttribute="width" secondItem="HlX-UA-BC9" secondAttribute="width" id="cGH-mt-jar"/>
-                                    <constraint firstItem="HlX-UA-BC9" firstAttribute="top" secondItem="eWo-2H-c1V" secondAttribute="top" constant="80" id="j3I-mq-OqB"/>
+                                    <constraint firstItem="HlX-UA-BC9" firstAttribute="top" secondItem="eWo-2H-c1V" secondAttribute="top" constant="45" id="j3I-mq-OqB"/>
                                     <constraint firstItem="jfu-d3-NYQ" firstAttribute="centerX" secondItem="eWo-2H-c1V" secondAttribute="centerX" id="ouZ-EZ-YhS"/>
-                                    <constraint firstItem="jfu-d3-NYQ" firstAttribute="top" secondItem="HlX-UA-BC9" secondAttribute="bottom" constant="8" id="ouz-7p-qk2"/>
+                                    <constraint firstItem="jfu-d3-NYQ" firstAttribute="top" secondItem="HlX-UA-BC9" secondAttribute="bottom" constant="-47" id="ouz-7p-qk2"/>
                                     <constraint firstItem="HlX-UA-BC9" firstAttribute="centerX" secondItem="eWo-2H-c1V" secondAttribute="centerX" id="vug-ki-92D"/>
                                 </constraints>
                             </view>

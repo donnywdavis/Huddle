@@ -7,25 +7,57 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		411106E91CFF771300B3DCB6 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411106E81CFF771300B3DCB6 /* SignupViewController.swift */; };
+		411106EB1CFF85BF00B3DCB6 /* NewsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411106EA1CFF85BF00B3DCB6 /* NewsFeedViewController.swift */; };
+		411106EE1CFF862500B3DCB6 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411106ED1CFF862500B3DCB6 /* DataService.swift */; };
+		411106F11CFF878C00B3DCB6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411106F01CFF878C00B3DCB6 /* User.swift */; };
+		417F763B1D0387290044548B /* RobotoSlab-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 417F76371D03848E0044548B /* RobotoSlab-Bold.ttf */; };
+		417F763C1D0387290044548B /* RobotoSlab-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 417F76381D03848E0044548B /* RobotoSlab-Light.ttf */; };
+		417F763D1D0387290044548B /* RobotoSlab-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 417F76391D03848E0044548B /* RobotoSlab-Regular.ttf */; };
+		417F763E1D0387290044548B /* RobotoSlab-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 417F763A1D03848E0044548B /* RobotoSlab-Thin.ttf */; };
+		417F763F1D0387290044548B /* SignPainter_HouseScript.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 417F76361D03847B0044548B /* SignPainter_HouseScript.ttf */; };
 		418C3B301CFE03A90095830D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418C3B2F1CFE03A90095830D /* AppDelegate.swift */; };
-		418C3B321CFE03A90095830D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418C3B311CFE03A90095830D /* ViewController.swift */; };
+		418C3B321CFE03A90095830D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418C3B311CFE03A90095830D /* LoginViewController.swift */; };
 		418C3B351CFE03A90095830D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 418C3B331CFE03A90095830D /* Main.storyboard */; };
 		418C3B371CFE03A90095830D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 418C3B361CFE03A90095830D /* Assets.xcassets */; };
 		418C3B3A1CFE03A90095830D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 418C3B381CFE03A90095830D /* LaunchScreen.storyboard */; };
 		418C3B421CFE04A50095830D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 418C3B411CFE04A50095830D /* GoogleService-Info.plist */; };
+		41A9573F1D0091D1003252E7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A9573E1D0091D1003252E7 /* ProfileViewController.swift */; };
+		41A957411D00D192003252E7 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A957401D00D192003252E7 /* Post.swift */; };
+		41B65D151D01067A00C3F81F /* NewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B65D141D01067A00C3F81F /* NewPostViewController.swift */; };
+		41B65D171D011FE800C3F81F /* NewsFeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B65D161D011FE800C3F81F /* NewsFeedTableViewCell.swift */; };
+		41F216661D01B48D0095F01A /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F216651D01B48D0095F01A /* ScheduleTableViewCell.swift */; };
+		41F2166A1D0204D10095F01A /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F216691D0204D10095F01A /* StatsViewController.swift */; };
+		41F2166C1D0207D90095F01A /* StatsPlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F2166B1D0207D90095F01A /* StatsPlayerTableViewCell.swift */; };
 		763ADCB6A9B91744EF9DB657 /* Pods_Huddle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13E1AABD64C10FCBEFC93B06 /* Pods_Huddle.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		13E1AABD64C10FCBEFC93B06 /* Pods_Huddle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Huddle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		411106E81CFF771300B3DCB6 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		411106EA1CFF85BF00B3DCB6 /* NewsFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsFeedViewController.swift; sourceTree = "<group>"; };
+		411106ED1CFF862500B3DCB6 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		411106F01CFF878C00B3DCB6 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		417F76361D03847B0044548B /* SignPainter_HouseScript.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SignPainter_HouseScript.ttf; sourceTree = "<group>"; };
+		417F76371D03848E0044548B /* RobotoSlab-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Bold.ttf"; sourceTree = "<group>"; };
+		417F76381D03848E0044548B /* RobotoSlab-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Light.ttf"; sourceTree = "<group>"; };
+		417F76391D03848E0044548B /* RobotoSlab-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Regular.ttf"; sourceTree = "<group>"; };
+		417F763A1D03848E0044548B /* RobotoSlab-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoSlab-Thin.ttf"; sourceTree = "<group>"; };
 		418C3B2C1CFE03A90095830D /* Huddle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Huddle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		418C3B2F1CFE03A90095830D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		418C3B311CFE03A90095830D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		418C3B311CFE03A90095830D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		418C3B341CFE03A90095830D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		418C3B361CFE03A90095830D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		418C3B391CFE03A90095830D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		418C3B3B1CFE03A90095830D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		418C3B411CFE04A50095830D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		41A9573E1D0091D1003252E7 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		41A957401D00D192003252E7 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		41B65D141D01067A00C3F81F /* NewPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPostViewController.swift; sourceTree = "<group>"; };
+		41B65D161D011FE800C3F81F /* NewsFeedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsFeedTableViewCell.swift; sourceTree = "<group>"; };
+		41F216651D01B48D0095F01A /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
+		41F216691D0204D10095F01A /* StatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
+		41F2166B1D0207D90095F01A /* StatsPlayerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsPlayerTableViewCell.swift; sourceTree = "<group>"; };
 		43C5079EE2B887BB6D674868 /* Pods-Huddle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Huddle.release.xcconfig"; path = "Pods/Target Support Files/Pods-Huddle/Pods-Huddle.release.xcconfig"; sourceTree = "<group>"; };
 		BD58443210CE515DE58C14B2 /* Pods-Huddle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Huddle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Huddle/Pods-Huddle.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -50,6 +82,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		411106EC1CFF861400B3DCB6 /* Data Service */ = {
+			isa = PBXGroup;
+			children = (
+				411106ED1CFF862500B3DCB6 /* DataService.swift */,
+			);
+			name = "Data Service";
+			sourceTree = "<group>";
+		};
+		411106EF1CFF877E00B3DCB6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				411106F01CFF878C00B3DCB6 /* User.swift */,
+				41A957401D00D192003252E7 /* Post.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		418C3B231CFE03A90095830D = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +120,8 @@
 		418C3B2E1CFE03A90095830D /* Huddle */ = {
 			isa = PBXGroup;
 			children = (
+				411106EF1CFF877E00B3DCB6 /* Models */,
+				411106EC1CFF861400B3DCB6 /* Data Service */,
 				418C3B451CFE04C90095830D /* Controllers */,
 				418C3B441CFE04C10095830D /* Views */,
 				418C3B431CFE04B30095830D /* Supporting Files */,
@@ -81,6 +132,11 @@
 		418C3B431CFE04B30095830D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				417F76371D03848E0044548B /* RobotoSlab-Bold.ttf */,
+				417F76381D03848E0044548B /* RobotoSlab-Light.ttf */,
+				417F76391D03848E0044548B /* RobotoSlab-Regular.ttf */,
+				417F763A1D03848E0044548B /* RobotoSlab-Thin.ttf */,
+				417F76361D03847B0044548B /* SignPainter_HouseScript.ttf */,
 				418C3B361CFE03A90095830D /* Assets.xcassets */,
 				418C3B3B1CFE03A90095830D /* Info.plist */,
 				418C3B411CFE04A50095830D /* GoogleService-Info.plist */,
@@ -93,6 +149,9 @@
 			children = (
 				418C3B331CFE03A90095830D /* Main.storyboard */,
 				418C3B381CFE03A90095830D /* LaunchScreen.storyboard */,
+				41B65D161D011FE800C3F81F /* NewsFeedTableViewCell.swift */,
+				41F216651D01B48D0095F01A /* ScheduleTableViewCell.swift */,
+				41F2166B1D0207D90095F01A /* StatsPlayerTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -101,7 +160,12 @@
 			isa = PBXGroup;
 			children = (
 				418C3B2F1CFE03A90095830D /* AppDelegate.swift */,
-				418C3B311CFE03A90095830D /* ViewController.swift */,
+				418C3B311CFE03A90095830D /* LoginViewController.swift */,
+				411106E81CFF771300B3DCB6 /* SignupViewController.swift */,
+				411106EA1CFF85BF00B3DCB6 /* NewsFeedViewController.swift */,
+				41A9573E1D0091D1003252E7 /* ProfileViewController.swift */,
+				41B65D141D01067A00C3F81F /* NewPostViewController.swift */,
+				41F216691D0204D10095F01A /* StatsViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -176,6 +240,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				417F763B1D0387290044548B /* RobotoSlab-Bold.ttf in Resources */,
+				417F763C1D0387290044548B /* RobotoSlab-Light.ttf in Resources */,
+				417F763D1D0387290044548B /* RobotoSlab-Regular.ttf in Resources */,
+				417F763E1D0387290044548B /* RobotoSlab-Thin.ttf in Resources */,
+				417F763F1D0387290044548B /* SignPainter_HouseScript.ttf in Resources */,
 				418C3B3A1CFE03A90095830D /* LaunchScreen.storyboard in Resources */,
 				418C3B421CFE04A50095830D /* GoogleService-Info.plist in Resources */,
 				418C3B371CFE03A90095830D /* Assets.xcassets in Resources */,
@@ -238,8 +307,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				418C3B321CFE03A90095830D /* ViewController.swift in Sources */,
+				418C3B321CFE03A90095830D /* LoginViewController.swift in Sources */,
+				41F2166C1D0207D90095F01A /* StatsPlayerTableViewCell.swift in Sources */,
+				411106E91CFF771300B3DCB6 /* SignupViewController.swift in Sources */,
+				41F216661D01B48D0095F01A /* ScheduleTableViewCell.swift in Sources */,
+				411106F11CFF878C00B3DCB6 /* User.swift in Sources */,
+				41A957411D00D192003252E7 /* Post.swift in Sources */,
 				418C3B301CFE03A90095830D /* AppDelegate.swift in Sources */,
+				41B65D151D01067A00C3F81F /* NewPostViewController.swift in Sources */,
+				411106EB1CFF85BF00B3DCB6 /* NewsFeedViewController.swift in Sources */,
+				41A9573F1D0091D1003252E7 /* ProfileViewController.swift in Sources */,
+				41B65D171D011FE800C3F81F /* NewsFeedTableViewCell.swift in Sources */,
+				41F2166A1D0204D10095F01A /* StatsViewController.swift in Sources */,
+				411106EE1CFF862500B3DCB6 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
